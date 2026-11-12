@@ -1,0 +1,39 @@
+name: Bug report
+description: Report a reproducible problem with Sortlane.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "For security vulnerabilities, use the private reporting link in SECURITY.md. Do not attach personal files, sensitive filenames, or unredacted local paths."
+  - type: input
+    id: version
+    attributes:
+      label: Sortlane version
+      placeholder: "0.2.0"
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: macOS version and Mac chip
+      placeholder: "macOS 26, Apple M-series"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Prefer steps using sample files or a minimal synthetic fixture.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional details
+      description: Redacted errors or screenshots, if useful.

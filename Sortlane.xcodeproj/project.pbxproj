@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	"archiveVersion" = 1;
+	"classes" = {
+	};
+	"objectVersion" = 56;
+	"objects" = {
+		"000000000000000000000064" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "SortlaneApp.swift";
+			"sourceTree" = "<group>";
+		};
+		"0000000000000000000000C8" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000064";
+		};
+		"000000000000000000000065" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "AppModel.swift";
+			"sourceTree" = "<group>";
+		};
+		"0000000000000000000000C9" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000065";
+		};
+		"000000000000000000000066" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "AppleClassifier.swift";
+			"sourceTree" = "<group>";
+		};
+		"0000000000000000000000CA" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000066";
+		};
+		"000000000000000000000067" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "FolderWatcher.swift";
+			"sourceTree" = "<group>";
+		};
+		"0000000000000000000000CB" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000067";
+		};
+		"000000000000000000000068" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "ContentView.swift";
+			"sourceTree" = "<group>";
+		};
+		"0000000000000000000000CC" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000068";
+		};
+		"000000000000000000000069" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "RuleEditor.swift";
+			"sourceTree" = "<group>";
+		};
+		"0000000000000000000000CD" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000069";
+		};
+		"000000000000000000000014" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.application";
+			"path" = "Sortlane.app";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"000000000000000000000015" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"000000000000000000000064",
+				"000000000000000000000065",
+				"000000000000000000000066",
+				"000000000000000000000067",
+				"000000000000000000000068",
+				"000000000000000000000069",
+			);
+			"path" = "Sources/Sortlane";
+			"sourceTree" = "<group>";
+		};
+		"000000000000000000000016" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.plist.xml";
+			"path" = "Info.plist";
+			"sourceTree" = "<group>";
+		};
+		"000000000000000000000017" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.plist.entitlements";
+			"path" = "Sortlane.entitlements";
+			"sourceTree" = "<group>";
+		};
+		"000000000000000000000018" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"000000000000000000000016",
+				"000000000000000000000017",
+			);
+			"path" = "Resources";
+			"sourceTree" = "<group>";
+		};
+		"000000000000000000000019" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"000000000000000000000014",
+			);
+			"name" = "Products";
+			"sourceTree" = "<group>";
+		};
+		"00000000000000000000001A" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"000000000000000000000015",
+				"000000000000000000000018",
+				"000000000000000000000019",
+			);
+			"sourceTree" = "<group>";
+		};
+		"00000000000000000000001B" = {
+			"isa" = "XCLocalSwiftPackageReference";
+			"relativePath" = ".";
+		};
+		"00000000000000000000001C" = {
+			"isa" = "XCSwiftPackageProductDependency";
+			"package" = "00000000000000000000001B";
+			"productName" = "SortlaneCore";
+		};
+		"00000000000000000000001D" = {
+			"isa" = "PBXBuildFile";
+			"productRef" = "00000000000000000000001C";
+		};
+		"00000000000000000000001E" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+				"0000000000000000000000C8",
+				"0000000000000000000000C9",
+				"0000000000000000000000CA",
+				"0000000000000000000000CB",
+				"0000000000000000000000CC",
+				"0000000000000000000000CD",
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"00000000000000000000001F" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+				"00000000000000000000001D",
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"000000000000000000000020" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"000000000000000000000028" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"SDKROOT" = "macosx";
+				"ARCHS" = "arm64";
+				"MACOSX_DEPLOYMENT_TARGET" = "26.0";
+				"SWIFT_VERSION" = "6.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"SWIFT_STRICT_CONCURRENCY" = "complete";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"ENABLE_TESTABILITY" = "YES";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+			};
+			"name" = "Debug";
+		};
+		"00000000000000000000002A" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"PRODUCT_BUNDLE_IDENTIFIER" = "app.sortlane.mac";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"INFOPLIST_FILE" = "Resources/Info.plist";
+				"CODE_SIGN_ENTITLEMENTS" = "Resources/Sortlane.entitlements";
+				"CODE_SIGN_IDENTITY" = "-";
+				"CODE_SIGN_STYLE" = "Manual";
+				"ENABLE_APP_SANDBOX" = "YES";
+				"ENABLE_HARDENED_RUNTIME" = "YES";
+				"GENERATE_INFOPLIST_FILE" = "NO";
+				"LD_RUNPATH_SEARCH_PATHS" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+			};
+			"name" = "Debug";
+		};
+		"000000000000000000000029" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"SDKROOT" = "macosx";
+				"ARCHS" = "arm64";
+				"MACOSX_DEPLOYMENT_TARGET" = "26.0";
+				"SWIFT_VERSION" = "6.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"SWIFT_STRICT_CONCURRENCY" = "complete";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"ENABLE_TESTABILITY" = "NO";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+			};
+			"name" = "Release";
+		};
+		"00000000000000000000002B" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"PRODUCT_BUNDLE_IDENTIFIER" = "app.sortlane.mac";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"INFOPLIST_FILE" = "Resources/Info.plist";
+				"CODE_SIGN_ENTITLEMENTS" = "Resources/Sortlane.entitlements";
+				"CODE_SIGN_IDENTITY" = "-";
+				"CODE_SIGN_STYLE" = "Manual";
+				"ENABLE_APP_SANDBOX" = "YES";
+				"ENABLE_HARDENED_RUNTIME" = "YES";
+				"GENERATE_INFOPLIST_FILE" = "NO";
+				"LD_RUNPATH_SEARCH_PATHS" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+			};
+			"name" = "Release";
+		};
+		"00000000000000000000002C" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"000000000000000000000028",
+				"000000000000000000000029",
+			);
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"00000000000000000000002D" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"00000000000000000000002A",
+				"00000000000000000000002B",
+			);
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"00000000000000000000000A" = {
+			"isa" = "PBXNativeTarget";
+			"buildConfigurationList" = "00000000000000000000002D";
+			"buildPhases" = (
+				"00000000000000000000001E",
+				"00000000000000000000001F",
+				"000000000000000000000020",
+			);
+			"buildRules" = (
+			);
+			"dependencies" = (
+			);
+			"name" = "Sortlane";
+			"packageProductDependencies" = (
+				"00000000000000000000001C",
+			);
+			"productName" = "Sortlane";
+			"productReference" = "000000000000000000000014";
+			"productType" = "com.apple.product-type.application";
+		};
+		"000000000000000000000001" = {
+			"isa" = "PBXProject";
+			"attributes" = {
+				"BuildIndependentTargetsInParallel" = "YES";
+				"LastUpgradeCheck" = "2700";
+				"TargetAttributes" = {
+					"00000000000000000000000A" = {
+						"CreatedOnToolsVersion" = "27.0";
+					};
+				};
+			};
+			"buildConfigurationList" = "00000000000000000000002C";
+			"compatibilityVersion" = "Xcode 14.0";
+			"developmentRegion" = "en";
+			"hasScannedForEncodings" = 0;
+			"knownRegions" = (
+				"en",
+				"Base",
+			);
+			"mainGroup" = "00000000000000000000001A";
+			"packageReferences" = (
+				"00000000000000000000001B",
+			);
+			"productRefGroup" = "000000000000000000000019";
+			"projectDirPath" = "";
+			"projectRoot" = "";
+			"targets" = (
+				"00000000000000000000000A",
+			);
+		};
+	};
+	"rootObject" = "000000000000000000000001";
+}
