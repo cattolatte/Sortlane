@@ -1,30 +1,68 @@
-# Sortlane
+<p align="center">
+  <img src="docs/assets/banner.svg" alt="Sortlane — a little more order for your Mac. Native file organization with a preview, sorting rules, and checked Undo." width="100%">
+</p>
 
-**A little more order for your Mac.**
+<p align="center">
+  <strong>A lightweight, native file organizer for macOS.</strong><br>
+  Precise rules. A clear preview. Optional Apple Intelligence. Your files stay on your Mac.
+</p>
 
-[![macOS 26+](https://img.shields.io/badge/macOS-26%2B-161B28?logo=apple&logoColor=white)](https://github.com/cattolatte/Sortlane#requirements)
-[![Apple Silicon](https://img.shields.io/badge/architecture-Apple_Silicon-635CDC)](https://github.com/cattolatte/Sortlane#download)
-[![Swift 6](https://img.shields.io/badge/Swift-6-F05138?logo=swift&logoColor=white)](Package.swift)
-[![Preview v0.2.0](https://img.shields.io/badge/preview-v0.2.0-635CDC)](https://github.com/cattolatte/Sortlane/releases/tag/v0.2.0)
-[![MIT License](https://img.shields.io/badge/license-MIT-36A17D)](LICENSE)
-[![Build and test](https://github.com/cattolatte/Sortlane/actions/workflows/ci.yml/badge.svg)](https://github.com/cattolatte/Sortlane/actions/workflows/ci.yml)
+<p align="center">
+  <a href="#requirements"><img src="https://img.shields.io/badge/macOS-26%2B-161B28?logo=apple&amp;logoColor=white" alt="macOS 26 or later"></a>
+  <a href="#download"><img src="https://img.shields.io/badge/Apple_Silicon-arm64-635CDC" alt="Apple Silicon arm64"></a>
+  <a href="Package.swift"><img src="https://img.shields.io/badge/Swift-6-F05138?logo=swift&amp;logoColor=white" alt="Swift 6"></a>
+  <a href="https://github.com/cattolatte/Sortlane/releases/tag/v0.2.0"><img src="https://img.shields.io/badge/preview-v0.2.0-635CDC" alt="Preview v0.2.0"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-36A17D" alt="MIT License"></a>
+  <a href="https://github.com/cattolatte/Sortlane/actions/workflows/ci.yml"><img src="https://github.com/cattolatte/Sortlane/actions/workflows/ci.yml/badge.svg" alt="Build and test status"></a>
+</p>
 
-Sortlane is a lightweight, native file organizer for macOS. Turn a crowded Downloads folder into a reviewable sorting plan, build precise rules, and find useful document categories with optional Apple Intelligence. Files stay on your Mac.
+<p align="center">
+  <a href="#download"><strong>Download for Mac</strong></a> ·
+  <a href="docs/USER_GUIDE.md">User guide</a> ·
+  <a href="CHANGELOG.md">Changelog</a> ·
+  <a href="SECURITY.md">Security</a> ·
+  <a href="CONTRIBUTING.md">Contribute</a>
+</p>
 
-[Download](https://github.com/cattolatte/Sortlane/releases/tag/v0.2.0) · [User guide](docs/USER_GUIDE.md) · [Changelog](CHANGELOG.md) · [Security](SECURITY.md) · [Contributing](CONTRIBUTING.md)
+## Make room for what matters
 
-> **Early preview:** v0.2.0 is ad-hoc signed and is not Developer ID signed or notarized. macOS may block a downloaded copy. For a locally built app, follow the build instructions below. This preview supports moves on the same volume only.
+Turn a crowded Downloads folder into a plan you can review. Sortlane combines a native workspace with rules you control, local document suggestions, and a record of every move.
 
-## What it does
+| | What you can do |
+| --- | --- |
+| **Preview & review** | Search, filter, and sort the queue. Inspect destinations and select files individually or in batches. |
+| **Flexible rules** | Combine extensions, filename patterns, exclusions, sizes, and file ages. Use folders such as `Documents/{year}/{month}`. |
+| **Local intelligence** | Find Receipts, Bills, Study, Work, and Personal documents with Apple Intelligence and Vision OCR. Review every suggestion. |
+| **Folder routines** | Watch for new files while the app is open. Opt into automatic moves for eligible rule matches. |
+| **Checked Undo** | Keep a local move journal. Restore files after identity and content checks. |
+| **Native details** | Light and dark appearances, manual destinations, prioritized rules, and JSON import/export. |
 
-- **Preview before organizing.** Search, filter, and sort a file queue, inspect destinations, and select files individually or in batches.
-- **Make rules that fit your files.** Combine extensions, filename text, `*` / `?` patterns, exclusions, size limits, and modification age. Route files into folders such as `Documents/{year}/{month}`.
-- **Read documents locally.** Apple Intelligence suggests Receipts, Bills, Study, Work, and Personal categories. Vision OCR reads scanned pages and document images. Suggestions always need your selection.
-- **Keep a routine.** Watch a folder while the app is open, or opt into automatic moves for eligible rule matches. Manual and Apple Intelligence destinations remain under review.
-- **Keep a record.** Every move is journaled locally. Undo checks file identity and content before restoring it.
-- **Make it yours.** Light, dark, and system appearances; manual destinations; prioritized rules; JSON rule import and export.
+No account or subscription. No external package dependencies. No bundled third-party model or network client entitlement.
 
-No account, subscription, third-party model bundle, or network client entitlement. The app uses system frameworks and has no external package dependencies.
+## Download
+
+**[Download v0.2.0 for Apple Silicon](https://github.com/cattolatte/Sortlane/releases/tag/v0.2.0)**
+
+| Package | Best for |
+| --- | --- |
+| [**DMG disk image**](https://github.com/cattolatte/Sortlane/releases/download/v0.2.0/Sortlane-0.2.0-macos-arm64.dmg) | Open the disk image and copy `Sortlane.app` to Applications |
+| [**tar.gz archive**](https://github.com/cattolatte/Sortlane/releases/download/v0.2.0/Sortlane-0.2.0-macos-arm64.tar.gz) | Extract the app bundle and move it to Applications |
+| [**SHA256SUMS**](https://github.com/cattolatte/Sortlane/releases/download/v0.2.0/SHA256SUMS) | Verify the downloaded packages |
+
+> **Preview signing:** v0.2.0 is ad-hoc signed, **not Developer ID signed or notarized**. macOS may block a downloaded copy. [Building locally](#build-and-test) is the supported alternative. Quit an older instance before replacing the app.
+
+<details>
+<summary>Verify a download</summary>
+
+Put both packages and `SHA256SUMS` in the same folder, open Terminal there, and run:
+
+```sh
+shasum -a 256 -c SHA256SUMS
+```
+
+Checksums detect changed or incomplete downloads; they do not replace code signing or notarization. GitHub's automatically generated source archives contain source code, not an installed app.
+
+</details>
 
 ## Requirements
 
@@ -37,26 +75,6 @@ No account, subscription, third-party model bundle, or network client entitlemen
 | Building from source | Full Xcode 26 or later; verified locally with Xcode 27.2 |
 
 The rules engine works when Apple Intelligence is unavailable. Apple's system model still uses system storage and compute; Sortlane does not download its own model.
-
-## Download
-
-Get the files from the [v0.2.0 release](https://github.com/cattolatte/Sortlane/releases/tag/v0.2.0):
-
-| Asset | Use |
-| --- | --- |
-| `Sortlane-0.2.0-macos-arm64.dmg` | Disk image containing the app |
-| `Sortlane-0.2.0-macos-arm64.tar.gz` | Compressed app bundle |
-| `SHA256SUMS` | SHA-256 checksums for the release assets |
-
-For the disk image, open it and copy `Sortlane.app` to Applications. For the archive, extract it and move `Sortlane.app` to Applications. Quit an older Sortlane instance before replacing it. These are preview packages with the signing limitations described above.
-
-To check downloaded assets, place them beside `SHA256SUMS`, open Terminal in that folder, and run:
-
-```sh
-shasum -a 256 -c SHA256SUMS
-```
-
-A checksum detects a changed or incomplete download; it does not replace code signing or notarization. GitHub's automatically generated source archives contain source code, not an installed app.
 
 ## First run
 
@@ -99,14 +117,16 @@ Sortlane combines App Sandbox with its own path policy. It rejects system locati
 
 This is early software, and the journal is not a backup. Cross-volume moves, multiple source profiles, duplicate detection, a login helper, and a Finder extension are not implemented. Cloud-only files are skipped. Broader sync-provider, accessibility, large-folder, and adversarial testing remain open work. Read [SECURITY.md](SECURITY.md) for the precise boundaries and limitations.
 
-## Project documentation
+## Explore the project
 
-- [User guide](docs/USER_GUIDE.md): setup, rules, local suggestions, automation, and recovery.
-- [Architecture](docs/ARCHITECTURE.md): modules, execution flow, persistence, and platform frameworks.
-- [Contributing](CONTRIBUTING.md): development workflow and reporting issues.
-- [Changelog](CHANGELOG.md): changes by version.
-- [Security](SECURITY.md): protections, threat model, and release-hardening work.
-- [Releasing](docs/RELEASING.md): release checks, packaging, and publication.
+| Guide | Inside |
+| --- | --- |
+| [User guide](docs/USER_GUIDE.md) | Setup, rule examples, local suggestions, automation, and recovery |
+| [Architecture](docs/ARCHITECTURE.md) | Modules, execution flow, persistence, and platform frameworks |
+| [Contributing](CONTRIBUTING.md) | Development workflow and reporting issues |
+| [Changelog](CHANGELOG.md) | Changes by version |
+| [Security](SECURITY.md) | Protections, threat model, and remaining hardening work |
+| [Releasing](docs/RELEASING.md) | Release checks, packaging, and publication |
 
 ## License
 

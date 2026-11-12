@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">Sortlane — a little more order for your Mac</title>
+  <desc id="description">An indigo and ivory wordmark on a dark navy background, with documents flowing into neatly arranged category folders.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1600" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#141925"/>
+      <stop offset="1" stop-color="#202438"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="96" y1="70" x2="160" y2="134" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9288FF"/>
+      <stop offset="1" stop-color="#635CDC"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(1280 275) rotate(90) scale(370 465)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#635CDC" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#635CDC" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="560" rx="28" fill="url(#background)"/>
+  <rect x="0.5" y="0.5" width="1599" height="559" rx="27.5" stroke="#F5F3EE" stroke-opacity="0.08"/>
+  <rect x="800" y="1" width="799" height="558" rx="28" fill="url(#glow)"/>
+  <path d="M838 70V490" stroke="#B5B2D2" stroke-opacity="0.12"/>
+
+  <rect x="96" y="70" width="64" height="64" rx="19" fill="url(#accent)"/>
+  <path d="m111 99 17-10 17 10-17 10-17-10Z" fill="#F5F3EE"/>
+  <path d="m111 107 17 10 17-10M111 115l17 10 17-10" stroke="#F5F3EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="183" y="109" fill="#B6B5C8" font-size="15" font-weight="600" letter-spacing="3.3">NATIVE FILE ORGANIZATION</text>
+    <text x="90" y="259" fill="#F5F3EE" font-size="112" font-weight="650" letter-spacing="-6">sortlane</text>
+    <text x="97" y="321" fill="#CFCDDD" font-size="32" font-weight="400" letter-spacing="-0.6">A little more order for your Mac.</text>
+    <text x="97" y="370" fill="#9294AB" font-size="19">Thoughtful rules. Local intelligence. Your control.</text>
+
+    <rect x="96" y="432" width="93" height="34" rx="17" fill="#F5F3EE" fill-opacity="0.055" stroke="#F5F3EE" stroke-opacity="0.08"/>
+    <text x="119" y="454" fill="#B9B7CD" font-size="13" font-weight="500">Preview</text>
+    <rect x="201" y="432" width="78" height="34" rx="17" fill="#F5F3EE" fill-opacity="0.055" stroke="#F5F3EE" stroke-opacity="0.08"/>
+    <text x="224" y="454" fill="#B9B7CD" font-size="13" font-weight="500">Rules</text>
+    <rect x="291" y="432" width="76" height="34" rx="17" fill="#F5F3EE" fill-opacity="0.055" stroke="#F5F3EE" stroke-opacity="0.08"/>
+    <text x="313" y="454" fill="#B9B7CD" font-size="13" font-weight="500">Undo</text>
+
+    <g stroke="#8B80ED" stroke-width="2" stroke-opacity="0.42">
+      <path d="M1055 280h50c18 0 25-12 25-30v-69c0-18 12-29 30-29h35"/>
+      <path d="M1055 280h140"/>
+      <path d="M1055 280h50c18 0 25 12 25 30v69c0 18 12 29 30 29h35"/>
+    </g>
+    <circle cx="1130" cy="280" r="5" fill="#A99FFF"/>
+
+    <g transform="rotate(-10 982 279)">
+      <rect x="923" y="200" width="116" height="148" rx="17" fill="#393655" stroke="#756C9D"/>
+    </g>
+    <g transform="rotate(5 989 279)">
+      <rect x="931" y="204" width="116" height="148" rx="17" fill="#514878" stroke="#9485CF"/>
+    </g>
+    <rect x="942" y="211" width="116" height="148" rx="17" fill="#E9E5FF"/>
+    <path d="M964 239h36M964 252h65" stroke="#6D62AE" stroke-width="5" stroke-linecap="round"/>
+    <path d="M964 281h65M964 295h65M964 309h42" stroke="#B9B0DE" stroke-width="4" stroke-linecap="round"/>
+    <text x="950" y="401" fill="#9294AB" font-size="14" letter-spacing="1">YOUR FILES</text>
+
+    <rect x="1195" y="112" width="300" height="80" rx="18" fill="#29283F" stroke="#766AAF" stroke-opacity="0.65"/>
+    <rect x="1213" y="130" width="44" height="44" rx="12" fill="#A697FF" fill-opacity="0.14"/>
+    <path d="M1224 143h9l4 4h10v15h-23v-19Z" stroke="#B9AAFF" stroke-width="1.8" stroke-linejoin="round"/>
+    <text x="1273" y="158" fill="#E3DDF8" font-size="20" font-weight="500">Documents</text>
+    <circle cx="1465" cy="152" r="4" fill="#A697FF"/>
+
+    <rect x="1195" y="240" width="300" height="80" rx="18" fill="#242F38" stroke="#6DAA9D" stroke-opacity="0.45"/>
+    <rect x="1213" y="258" width="44" height="44" rx="12" fill="#7FC5B3" fill-opacity="0.13"/>
+    <path d="M1224 271h9l4 4h10v15h-23v-19Z" stroke="#8FD2BE" stroke-width="1.8" stroke-linejoin="round"/>
+    <text x="1273" y="286" fill="#D9E8E3" font-size="20" font-weight="500">Images</text>
+    <circle cx="1465" cy="280" r="4" fill="#7FC5B3"/>
+
+    <rect x="1195" y="368" width="300" height="80" rx="18" fill="#302C36" stroke="#AB9176" stroke-opacity="0.4"/>
+    <rect x="1213" y="386" width="44" height="44" rx="12" fill="#D7B08C" fill-opacity="0.12"/>
+    <path d="M1224 399h9l4 4h10v15h-23v-19Z" stroke="#D9BC9D" stroke-width="1.8" stroke-linejoin="round"/>
+    <text x="1273" y="414" fill="#E8DFD6" font-size="20" font-weight="500">Archives</text>
+    <circle cx="1465" cy="408" r="4" fill="#D7B08C"/>
+  </g>
+</svg>

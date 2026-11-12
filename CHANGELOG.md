@@ -2,7 +2,7 @@
 
 Notable changes to Sortlane are recorded here. Version 0.2.0 is the first published preview.
 
-## [0.2.0] — 2026-11-12
+## [0.2.0] — 2026-11-13
 
 ### Added
 
