@@ -96,11 +96,33 @@
 			"path" = "Sortlane.entitlements";
 			"sourceTree" = "<group>";
 		};
+		"000000000000000000000070" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "image.icns";
+			"path" = "AppIcon.icns";
+			"sourceTree" = "<group>";
+		};
+		"000000000000000000000071" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "image.png";
+			"path" = "Brand/SortlaneLogo.png";
+			"sourceTree" = "<group>";
+		};
+		"0000000000000000000000D0" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000070";
+		};
+		"0000000000000000000000D1" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000071";
+		};
 		"000000000000000000000018" = {
 			"isa" = "PBXGroup";
 			"children" = (
 				"000000000000000000000016",
 				"000000000000000000000017",
+				"000000000000000000000070",
+				"000000000000000000000071",
 			);
 			"path" = "Resources";
 			"sourceTree" = "<group>";
@@ -160,6 +182,8 @@
 			"isa" = "PBXResourcesBuildPhase";
 			"buildActionMask" = 2147483647;
 			"files" = (
+				"0000000000000000000000D0",
+				"0000000000000000000000D1",
 			);
 			"runOnlyForDeploymentPostprocessing" = 0;
 		};

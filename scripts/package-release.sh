@@ -25,13 +25,31 @@ done
 
 bash scripts/build-app.sh release
 codesign --verify --strict build/Sortlane.app
+if [[ "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIconFile' build/Sortlane.app/Contents/Info.plist)" != "AppIcon.icns" ]]; then
+    echo "The app must declare its bundled AppIcon.icns." >&2
+    exit 1
+fi
+if [[ "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' build/Sortlane.app/Contents/Info.plist)" != "$version" ]]; then
+    echo "Packaged app version does not match the release version." >&2
+    exit 1
+fi
+cmp Resources/AppIcon.icns build/Sortlane.app/Contents/Resources/AppIcon.icns
+cmp Resources/Brand/SortlaneLogo.png build/Sortlane.app/Contents/Resources/SortlaneLogo.png
 if [[ "$(lipo -archs build/Sortlane.app/Contents/MacOS/Sortlane)" != "arm64" ]]; then
     echo "Expected an arm64 app executable." >&2
     exit 1
 fi
 
 staging="$(mktemp -d "$out_directory/.package.XXXXXX")"
-trap 'rm -rf "$staging"' EXIT
+mounted_volume=""
+cleanup() {
+    if [[ -n "$mounted_volume" ]] && ! hdiutil detach -quiet "$mounted_volume"; then
+        echo "Could not eject the temporary image; retained $staging for cleanup." >&2
+        return
+    fi
+    rm -rf "$staging"
+}
+trap cleanup EXIT
 mkdir -p "$staging/archive" "$staging/disk"
 ditto --norsrc --noextattr build/Sortlane.app "$staging/archive/Sortlane.app"
 cp LICENSE "$staging/archive/LICENSE.txt"
@@ -59,7 +77,15 @@ codesign --verify --strict "$staging/archive/Sortlane.app"
 COPYFILE_DISABLE=1 tar -czf "$staging/$archive_name.tar.gz" -C "$staging/archive" Sortlane.app LICENSE.txt READ-ME.txt
 ditto --norsrc --noextattr "$staging/archive" "$staging/disk"
 ln -s /Applications "$staging/disk/Applications"
-hdiutil create -quiet -volname "Sortlane $version" -srcfolder "$staging/disk" -format UDZO "$staging/$archive_name.dmg"
+cp Resources/AppIcon.icns "$staging/disk/.VolumeIcon.icns"
+hdiutil create -quiet -volname "Sortlane $version" -srcfolder "$staging/disk" -format UDRW "$staging/writable.dmg"
+mkdir -p "$staging/mounted"
+hdiutil attach -quiet -nobrowse -readwrite -mountpoint "$staging/mounted" "$staging/writable.dmg"
+mounted_volume="$staging/mounted"
+xcrun SetFile -a C "$mounted_volume"
+hdiutil detach -quiet "$mounted_volume"
+mounted_volume=""
+hdiutil convert -quiet "$staging/writable.dmg" -format UDZO -o "$staging/$archive_name.dmg"
 hdiutil verify "$staging/$archive_name.dmg"
 (
     cd "$staging"

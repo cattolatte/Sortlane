@@ -22,6 +22,12 @@ Sortlane is a Swift 6 macOS app with a UI-independent core. It uses system frame
 
 Both the Swift package and native Xcode app consume the same core. App source files are explicitly listed in the Xcode project. Core package files are discovered by SwiftPM.
 
+## Branding resources
+
+`Resources/Brand/SortlaneLogo.png` is the canonical logo image. The sidebar loads it from the main app bundle. `Resources/AppIcon.icns` contains the macOS icon sizes, and `CFBundleIconFile` in `Resources/Info.plist` identifies it for Finder, the Dock, and the standard About panel.
+
+The Xcode resource phase and the packaging script both include these assets in the app bundle. The repository banner embeds a compact copy of the same logo. After updating the canonical image, run `bash scripts/build-icons.sh` to regenerate the macOS icon sizes and `swift scripts/update-banner.swift` to refresh `docs/assets/banner.svg`. Commit the source artwork and both derived assets together. Branding does not change the core file-operation or permission model.
+
 ## Planning and execution
 
 1. Native folder pickers grant access to source and destination folders. Scoped bookmarks preserve that access across launches.

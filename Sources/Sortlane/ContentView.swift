@@ -12,6 +12,8 @@ extension Color {
 }
 
 struct ContentView: View {
+    @MainActor private static let brandImage: NSImage? = Bundle.main.url(forResource: "SortlaneLogo", withExtension: "png").flatMap { NSImage(contentsOf: $0) }
+    private var appVersion: String { Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "Preview" }
     @ObservedObject var model: AppModel
     @Environment(\.colorScheme) private var colorScheme
     @AppStorage("appearance") private var appearance = "system"
@@ -61,7 +63,7 @@ struct ContentView: View {
     private var sidebar: some View {
         VStack(alignment: .leading, spacing: 0) {
             HStack(spacing: 11) {
-                Image(systemName: "square.stack.3d.up.fill").font(.system(size: 22, weight: .medium)).foregroundStyle(.white).frame(width: 44, height: 44).background(Color.laneAccent, in: RoundedRectangle(cornerRadius: 13))
+                Image(nsImage: Self.brandImage ?? NSImage()).resizable().interpolation(.high).scaledToFit().frame(width: 44, height: 44).accessibilityHidden(true)
                 VStack(alignment: .leading, spacing: 3) {
                     Text("sortlane").font(.system(size: 23, weight: .semibold, design: .rounded)).tracking(-0.8).foregroundStyle(.white)
                     Text("A LITTLE MORE ORDER").font(.system(size: 7, weight: .medium)).tracking(1.3).foregroundStyle(.white.opacity(0.4))
@@ -99,7 +101,7 @@ struct ContentView: View {
                 Image(systemName: "lock.shield").font(.system(size: 10))
                 Text("LOCAL BY DESIGN").font(.system(size: 8, weight: .semibold)).tracking(1.1)
                 Spacer()
-                Text("0.2").font(.system(size: 10, design: .monospaced))
+                Text(appVersion).font(.system(size: 10, design: .monospaced))
             }.foregroundStyle(.white.opacity(0.3)).padding(.top, 22).padding(.bottom, 23)
         }.padding(.horizontal, 19).frame(width: 220).background(Color.laneInk)
     }

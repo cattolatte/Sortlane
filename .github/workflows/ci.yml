@@ -34,6 +34,11 @@ jobs:
           -configuration Debug -destination 'platform=macOS,arch=arm64'
           -derivedDataPath .build/Xcode -skipPackageUpdates
           -disableAutomaticPackageResolution build
+      - name: Verify native app branding
+        run: |
+          native_app=.build/Xcode/Build/Products/Debug/Sortlane.app
+          cmp Resources/AppIcon.icns "$native_app/Contents/Resources/AppIcon.icns"
+          cmp Resources/Brand/SortlaneLogo.png "$native_app/Contents/Resources/SortlaneLogo.png"
       - name: Build and verify release packages
         run: bash scripts/package-release.sh
       - name: Retain release packages

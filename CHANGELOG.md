@@ -2,6 +2,18 @@
 
 Notable changes to Sortlane are recorded here. Version 0.2.0 is the first published preview.
 
+## [0.2.1] — 2026-11-13
+
+### Changed
+
+- Replaced the temporary mark with Sortlane's custom ribbon logo in the app sidebar and repository banner.
+- Added the matching macOS app icon for Finder, the Dock, and About Sortlane.
+- Applied the icon to the mounted release disk image.
+- Included the same logo and icon resources in native Xcode builds, packaged apps, and release downloads.
+- Added packaging checks for required branding resources and updated the current download links.
+
+Sorting, file access, Undo, and automation behavior are unchanged. Packages remain ad-hoc signed previews and are not notarized.
+
 ## [0.2.0] — 2026-11-13
 
 ### Added
@@ -36,4 +48,5 @@ Notable changes to Sortlane are recorded here. Version 0.2.0 is the first publis
 - No multi-source profiles, duplicate detection, login helper, or Finder extension.
 - Additional parser isolation, concurrency testing, accessibility testing, and release signing remain planned work.
 
+[0.2.1]: https://github.com/cattolatte/Sortlane/releases/tag/v0.2.1
 [0.2.0]: https://github.com/cattolatte/Sortlane/releases/tag/v0.2.0

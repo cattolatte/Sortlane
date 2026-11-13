@@ -11,7 +11,7 @@
   <a href="#requirements"><img src="https://img.shields.io/badge/macOS-26%2B-161B28?logo=apple&amp;logoColor=white" alt="macOS 26 or later"></a>
   <a href="#download"><img src="https://img.shields.io/badge/Apple_Silicon-arm64-635CDC" alt="Apple Silicon arm64"></a>
   <a href="Package.swift"><img src="https://img.shields.io/badge/Swift-6-F05138?logo=swift&amp;logoColor=white" alt="Swift 6"></a>
-  <a href="https://github.com/cattolatte/Sortlane/releases/tag/v0.2.0"><img src="https://img.shields.io/badge/preview-v0.2.0-635CDC" alt="Preview v0.2.0"></a>
+  <a href="https://github.com/cattolatte/Sortlane/releases/tag/v0.2.1"><img src="https://img.shields.io/badge/preview-v0.2.1-635CDC" alt="Preview v0.2.1"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-36A17D" alt="MIT License"></a>
   <a href="https://github.com/cattolatte/Sortlane/actions/workflows/ci.yml"><img src="https://github.com/cattolatte/Sortlane/actions/workflows/ci.yml/badge.svg" alt="Build and test status"></a>
 </p>
@@ -41,15 +41,15 @@ No account or subscription. No external package dependencies. No bundled third-p
 
 ## Download
 
-**[Download v0.2.0 for Apple Silicon](https://github.com/cattolatte/Sortlane/releases/tag/v0.2.0)**
+**[Download v0.2.1 for Apple Silicon](https://github.com/cattolatte/Sortlane/releases/tag/v0.2.1)**
 
 | Package | Best for |
 | --- | --- |
-| [**DMG disk image**](https://github.com/cattolatte/Sortlane/releases/download/v0.2.0/Sortlane-0.2.0-macos-arm64.dmg) | Open the disk image and copy `Sortlane.app` to Applications |
-| [**tar.gz archive**](https://github.com/cattolatte/Sortlane/releases/download/v0.2.0/Sortlane-0.2.0-macos-arm64.tar.gz) | Extract the app bundle and move it to Applications |
-| [**SHA256SUMS**](https://github.com/cattolatte/Sortlane/releases/download/v0.2.0/SHA256SUMS) | Verify the downloaded packages |
+| [**DMG disk image**](https://github.com/cattolatte/Sortlane/releases/download/v0.2.1/Sortlane-0.2.1-macos-arm64.dmg) | Open the disk image and copy `Sortlane.app` to Applications |
+| [**tar.gz archive**](https://github.com/cattolatte/Sortlane/releases/download/v0.2.1/Sortlane-0.2.1-macos-arm64.tar.gz) | Extract the app bundle and move it to Applications |
+| [**SHA256SUMS**](https://github.com/cattolatte/Sortlane/releases/download/v0.2.1/SHA256SUMS) | Verify the downloaded packages |
 
-> **Preview signing:** v0.2.0 is ad-hoc signed, **not Developer ID signed or notarized**. macOS may block a downloaded copy. [Building locally](#build-and-test) is the supported alternative. Quit an older instance before replacing the app.
+> **Preview signing:** v0.2.1 is ad-hoc signed, **not Developer ID signed or notarized**. macOS may block a downloaded copy. [Building locally](#build-and-test) is the supported alternative. Quit an older instance before replacing the app.
 
 <details>
 <summary>Verify a download</summary>
@@ -109,7 +109,7 @@ Run the core tests with:
 swift test
 ```
 
-The v0.2.0 test suite contains 38 tests for path restrictions, conflicts, stale previews, move/undo, journal recovery, rules, and review preservation. Fixtures live under `.build/SecurityFixtures`. Use the Xcode app target or packaged `.app` for normal use: running the raw Swift Package executable does not enable App Sandbox.
+The core test suite contains 38 tests for path restrictions, conflicts, stale previews, move/undo, journal recovery, rules, and review preservation. Fixtures live under `.build/SecurityFixtures`. Use the Xcode app target or packaged `.app` for normal use: running the raw Swift Package executable does not enable App Sandbox.
 
 ## Safety and current limits
 
